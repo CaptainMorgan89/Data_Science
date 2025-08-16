@@ -1,0 +1,63 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score
+
+# Δεδομένα: [ηλικία, μισθός]
+X = [
+    [22, 20000],
+    [25, 22000],
+    [47, 50000],
+    [52, 52000],
+    [46, 49000],
+    [56, 60000],
+    [23, 23000],
+    [24, 25000],
+    [48, 52000],
+    [50, 51000],
+]
+
+# Ετικέτες: 1 = αγόρασε, 0 = δεν αγόρασε
+y = [0, 0, 1, 1, 1, 1, 0, 0, 1, 1]
+
+# Διαχωρισμός σε train/test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+
+# Δημιουργία & εκπαίδευση μοντέλου
+model = GaussianNB()
+model.fit(X_train, y_train)
+
+# Πρόβλεψη
+y_pred = model.predict(X_test)
+
+# Αξιολόγηση
+print("Ακρίβεια:", accuracy_score(y_test, y_pred))
+
+# Δοκιμή νέου ατόμου: 28 ετών, μισθός 24000
+new_person = [[28, 24000]]
+prediction = model.predict(new_person)
+print("Θα αγοράσει;" if prediction[0] == 1 else "Δε θα αγοράσει")
+
+# --- ΔΙΑΓΡΑΜΜΑ ---
+
+# Προετοιμασία δεδομένων για plotting
+import pandas as pd
+df = pd.DataFrame(X, columns=["Ηλικία", "Μισθός"])
+df["Αγόρασε"] = y
+
+# Προσθήκη του νέου ατόμου στο plot
+df_new = pd.DataFrame([[28, 24000, prediction[0]]], columns=["Ηλικία", "Μισθός", "Αγόρασε"])
+df_all = pd.concat([df, df_new], ignore_index=True)
+
+# Plot με seaborn
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=df_all, x="Ηλικία", y="Μισθός", hue="Αγόρασε", palette={0: "red", 1: "green"}, s=100)
+
+# Επισήμανση νέου ατόμου
+plt.scatter(28, 24000, color="blue", s=200, edgecolor="black", marker="X", label="Νέο Άτομο")
+
+plt.title("Απόφαση Αγοράς με βάση Ηλικία & Μισθό")
+plt.legend()
+plt.grid(True)
+plt.show()

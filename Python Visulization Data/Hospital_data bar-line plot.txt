@@ -1,0 +1,61 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 📥 Φόρτωση δεδομένων
+file_path = r"C:\Users\agkap\Desktop\hospital_data.csv"
+df = pd.read_csv(file_path)
+
+# 👀 Προεπισκόπηση δεδομένων
+print("🔹 Πρώτες γραμμές του dataset:")
+print(df.head())
+
+# 📅 Μετατροπή ημερομηνιών σε datetime
+df['admission_date'] = pd.to_datetime(df['admission_date'])
+df['discharge_date'] = pd.to_datetime(df['discharge_date'])
+
+# 🧮 Υπολογισμός length of stay (ημέρες παραμονής)
+df['length_of_stay'] = (df['discharge_date'] - df['admission_date']).dt.days
+
+# 🔥 Μέσος χρόνος παραμονής
+avg_stay = df['length_of_stay'].mean()
+print(f"\n📊 Μέσος χρόνος παραμονής: {avg_stay:.2f} ημέρες")
+
+# 📌 Πιο συχνές διαγνώσεις
+common_diagnoses = df['diagnosis'].value_counts().head(10)
+print("\n🏥 Top 10 πιο συχνές διαγνώσεις:")
+print(common_diagnoses)
+
+# 🎨 Γράφημα 1: Κατανομή ηλικιών ασθενών
+plt.figure(figsize=(10, 6))
+sns.histplot(df['age'], bins=20, kde=True, color='skyblue')
+plt.title('Κατανομή Ηλικίας Ασθενών')
+plt.xlabel('Ηλικία')
+plt.ylabel('Αριθμός Ασθενών')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# 🎨 Γράφημα 2: Top 10 Διαγνώσεις
+plt.figure(figsize=(12, 6))
+sns.barplot(x=common_diagnoses.values, y=common_diagnoses.index, palette='viridis')
+plt.title(' Top 10 Πιο Συχνές Διαγνώσεις')
+plt.xlabel('Αριθμός Περιστατικών')
+plt.ylabel('Διάγνωση')
+plt.tight_layout()
+plt.show()
+
+# 📅 Ομαδοποίηση ανά μήνα εισαγωγής
+df['year_month'] = df['admission_date'].dt.to_period('M')
+monthly_admissions = df['year_month'].value_counts().sort_index()
+
+# 🎨 Γράφημα 3: Τάση Εισαγωγών ανά Μήνα
+plt.figure(figsize=(12, 6))
+sns.lineplot(x=monthly_admissions.index.astype(str), y=monthly_admissions.values, marker='o', color='orange')
+plt.title('Τάση Εισαγωγών Ανά Μήνα')
+plt.xlabel('Μήνας')
+plt.ylabel('Αριθμός Εισαγωγών')
+plt.xticks(rotation=45)
+plt.grid(True)
+plt.tight_layout()
+plt.show()

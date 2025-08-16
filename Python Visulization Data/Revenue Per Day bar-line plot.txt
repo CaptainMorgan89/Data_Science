@@ -1,0 +1,40 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+file_path = r"C:\Users\agkap\Desktop\example3.csv"
+df = pd.read_csv(file_path)
+
+df['Date'] = pd.to_datetime(df['Date'])
+
+# Υπολογισμοί
+total_revenue = np.sum(df['Revenue'])
+print("Total Revenue: ", total_revenue)
+
+daily_revenue = df.groupby('Date')['Revenue'].sum()
+average_daily_revenue = daily_revenue.mean()
+print("Average Daily Revenue: ", average_daily_revenue)
+
+product_revenue = df.groupby('Product')['Revenue'].sum()
+print("Total Revenue per Product:\n", product_revenue)
+
+# Bar plot έσοδα ανά προϊόν
+fig, ax = plt.subplots()
+ax.bar(product_revenue.index, product_revenue.values, color='skyblue', edgecolor='black')
+ax.set_xlabel('Product')
+ax.set_ylabel('Revenue')
+ax.set_title('Total Revenue per Product')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# Line plot ημερήσια έσοδα
+fig, ax = plt.subplots()
+ax.plot(daily_revenue.index, daily_revenue.values, color='green', linewidth=2)
+ax.set_xlabel('Date')
+ax.set_ylabel('Revenue')
+ax.set_title('Daily Revenue')
+plt.xticks(rotation=45)
+plt.grid(True)
+plt.tight_layout()
+plt.show()
