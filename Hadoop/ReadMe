@@ -1,5 +1,8 @@
 Hadoop_Text_Analysis
 
+
+NumeronymsCount
+
 This folder contains a Hadoop MapReduce project for counting numeronyms in a text file.
 
 **Input File:**  
