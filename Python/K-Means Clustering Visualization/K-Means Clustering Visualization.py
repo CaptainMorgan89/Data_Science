@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_blobs
+from sklearn.cluster import KMeans
+
+# Create a dataset with 3 natural clusters
+X, y_true = make_blobs(n_samples=300, centers=3, cluster_std=0.60, random_state=0)
+
+# Set values for K
+k_values = [2, 3, 10]  # Underfitting, correct, Overfitting
+
+# Create subplots
+plt.figure(figsize=(15, 5))
+
+for i, k in enumerate(k_values):
+    kmeans = KMeans(n_clusters=k, random_state=0)
+    y_kmeans = kmeans.fit_predict(X)
+
+    # Plot
+    plt.subplot(1, 3, i+1)
+    plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=50, cmap='viridis')
+    plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1],
+                c='red', s=200, alpha=0.7, marker='X')
+    plt.title(f"K = {k}")
+
+plt.suptitle("K-Means: Underfitting vs Good Fit vs Overfitting", fontsize=16)
+plt.show()
