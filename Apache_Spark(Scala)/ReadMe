@@ -1,0 +1,95 @@
+Apache_Spark_Scala_Projects
+
+WordCount_Apache_Spark (Scala)
+
+Description:
+This project uses Apache Spark and Scala to process a text file (SherlockHolmes.txt) and perform word count analysis.
+
+Analysis includes:
+
+Total number of words
+
+Average word length
+
+Top 5 most frequent words longer than the average length
+
+Input File:
+
+SherlockHolmes.txt – Text file with the input content.
+
+Output File:
+
+word_count_results2.txt – Contains total word count, average word length, and top 5 most frequent words longer than average.
+
+ChessGames_Apache_Spark (Scala)
+
+Description:
+This project analyzes a dataset of chess games using Apache Spark (Scala).
+
+Input File:
+
+games.csv – CSV file containing chess game data (players, moves, etc.).
+
+Output Files:
+
+player_pairs_output.txt – Lists player pairs who have played more than 5 games together, sorted by the number of games.
+
+top_5_moves.txt – Displays the top 5 most frequent moves across all games.
+
+Functionality:
+
+ChessGames.scala counts how many games each pair of players has played and filters those with more than 5 games.
+
+ChessGames2.scala identifies the top 5 most common chess moves in the dataset.
+
+Covid19_Analysis_Apache_Spark (Scala)
+
+Description:
+This project performs COVID-19 data analysis using Apache Spark (Scala) on a dataset containing global cases and deaths.
+
+Input File:
+
+covid.csv – CSV file with COVID-19 daily data per country.
+
+Output File:
+
+covid_results.txt – Contains all query results.
+
+Analysis Queries:
+
+Cases in Greece during December 2020 – Lists daily reported cases for Greece in Dec 2020.
+
+Total cases and deaths per continent – Aggregates total cases and deaths for each continent.
+
+Average cases/deaths per country in Europe – Computes mean cases and deaths per European country.
+
+Top 10 worst days for cases in Europe – Finds the dates with the highest number of cases in Europe.
+
+SalesAnalysis_Apache_Spark (Scala)
+
+Description:
+This project analyzes sales data using two Apache Spark frameworks:
+
+RDD / DataFrame API – For structured operations and aggregations.
+
+Spark SQL API – For querying with SQL syntax.
+
+Input File:
+
+sales.csv – CSV file with sales data.
+
+Output File:
+
+sales_output.txt – Contains all analysis results.
+
+Analysis Includes:
+
+Top 5 invoices by total value.
+
+Most sold products.
+
+Most frequently invoiced products.
+
+Average items and cost per invoice.
+
+Top customers by total revenue.
