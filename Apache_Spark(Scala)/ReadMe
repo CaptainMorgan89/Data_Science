@@ -1,4 +1,8 @@
-Apache_Spark_Scala_Projects
+Apache_Spark_Scala_Projects  
+
+
+
+
 
 WordCount_Apache_Spark (Scala)
 
@@ -21,6 +25,11 @@ Output File:
 
 word_count_results2.txt – Contains total word count, average word length, and top 5 most frequent words longer than average.
 
+
+
+
+
+
 ChessGames_Apache_Spark (Scala)
 
 Description:
@@ -41,6 +50,11 @@ Functionality:
 ChessGames.scala counts how many games each pair of players has played and filters those with more than 5 games.
 
 ChessGames2.scala identifies the top 5 most common chess moves in the dataset.
+
+
+
+
+
 
 Covid19_Analysis_Apache_Spark (Scala)
 
@@ -64,6 +78,11 @@ Total cases and deaths per continent – Aggregates total cases and deaths for e
 Average cases/deaths per country in Europe – Computes mean cases and deaths per European country.
 
 Top 10 worst days for cases in Europe – Finds the dates with the highest number of cases in Europe.
+
+
+
+
+
 
 SalesAnalysis_Apache_Spark (Scala)
 
