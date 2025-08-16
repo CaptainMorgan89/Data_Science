@@ -1,0 +1,8 @@
+Total word count: 1088506
+Average word length: 4.564202677798744
+Top 5 most frequent words with length greater than average:
+which: 4840
+there: 2968
+their: 2953
+pierre: 1963
+would: 1951

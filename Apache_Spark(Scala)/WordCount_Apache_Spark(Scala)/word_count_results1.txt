@@ -1,0 +1,8 @@
+Total word count: 928008
+Average word length: 4.085025129093714
+Top 5 most frequent words with length greater than average:
+shall: 3600
+enter: 2357
+which: 2322
+would: 2301
+there: 2210
