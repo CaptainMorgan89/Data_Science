@@ -1,0 +1,169 @@
+Afghanistan	730
+Albania	546
+Algeria	2042
+American Samoa	247
+Angola	357
+Argentina	26770
+Armenia	264
+Aruba	739
+Australia	63433
+Austria	21687
+Bahamas	560
+Bahrain	87
+Bangladesh	429
+Barbados	92
+Belarus	427
+Belgium	50803
+Bermuda	95
+Bhutan	291
+Bolivia	797
+Bosnia and Herzegovina	2207
+Botswana	295
+Brazil	25435
+Bulgaria	5142
+Burkina Faso	903
+Burma	95
+Cambodia	793
+Cameroon	615
+Canada	200421
+Chad	493
+Chile	6178
+China	39863
+Colombia	3724
+Congo	88
+Costa Rica	431
+Croatia	4340
+Cuba	2899
+Cyprus	807
+Czech Republic	14115
+Czechoslovakia	7756
+C te d'Ivoire	180
+Denmark	41412
+Dominican Republic	866
+East Germany	2021
+Ecuador	893
+Egypt	2851
+El Salvador	167
+Estonia	4651
+Ethiopia	387
+Faroe Islands	97
+Federal Republic of Yugoslavia	1623
+Finland	46600
+France	436445
+Gabon	80
+Georgia	1751
+Germany	212484
+Ghana	655
+Greece	18699
+Greenland	90
+Grenada	79
+Guatemala	554
+Guinea	90
+Haiti	498
+Honduras	80
+Hong Kong	61390
+Hungary	18486
+Iceland	7340
+India	106844
+Indonesia	3831
+Iran	9888
+Iraq	1267
+Ireland	25484
+Isle Of Man	396
+Israel	15613
+Italy	256432
+Jamaica	711
+Japan	163888
+Jordan	1313
+Kazakhstan	1953
+Kenya	523
+Korea	90
+Kosovo	188
+Kuwait	273
+Kyrgyzstan	400
+Laos	289
+Latvia	2214
+Lebanon	1197
+Liberia	283
+Libya	520
+Liechtenstein	799
+Lithuania	3634
+Luxembourg	11215
+Macao	175
+Madagascar	204
+Malaysia	1338
+Mali	220
+Malta	885
+Martinique	103
+Mauritania	417
+Mexico	33939
+Micronesia	85
+Moldova	95
+Monaco	189
+Mongolia	186
+Montenegro	439
+Morocco	4035
+Namibia	105
+Nepal	797
+Netherlands	45428
+New Zealand	14033
+Nicaragua	183
+Nigeria	494
+North Korea	508
+Norway	24551
+Pakistan	1629
+Palestine	1325
+Panama	804
+Papua New Guinea	295
+Paraguay	317
+Peru	2436
+Philippines	7410
+Poland	33888
+Portugal	14823
+Puerto Rico	1094
+Qatar	1036
+Republic of Macedonia	1349
+Reunion	38
+Romania	13562
+Russia	48327
+Rwanda	527
+Samoa	110
+Saudi Arabia	490
+Senegal	1462
+Serbia	4337
+Serbia and Montenegro	1222
+Singapore	4202
+Slovakia	2419
+Slovenia	2850
+Somalia	90
+South Africa	14022
+South Korea	52876
+Soviet Union	45837
+Spain	103321
+Sri Lanka	318
+Suriname	105
+Sweden	63588
+Switzerland	32425
+Syria	355
+Taiwan	13921
+Tajikistan	275
+Tanzania	441
+Thailand	9735
+The Democratic Republic Of Congo	98
+Trinidad and Tobago	86
+Tunisia	2120
+Turkey	18998
+UK	469018
+USA	2164900
+Uganda	243
+Ukraine	4389
+United Arab Emirates	3074
+Uruguay	2038
+Uzbekistan	272
+Vanuatu	100
+Venezuela	1784
+Vietnam	1170
+West Germany	54312
+Yugoslavia	7869
+Zaire	80
+Zimbabwe	210
