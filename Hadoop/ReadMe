@@ -1,0 +1,82 @@
+Hadoop_Text_Analysis
+
+
+NumeronymsCount
+
+This folder contains a Hadoop MapReduce project for counting numeronyms in a text file.
+
+**Input File:**  
+- `SherlockHolmes.txt` – A text file containing the full text of Sherlock Holmes stories.  
+
+**MapReduce Project:**  
+1. **NumeronymsCount**  
+   - Counts numeronyms in the text. A numeronym is a shorthand for a word where the middle letters are replaced with the number of letters removed. For example, "international" → "i10l".  
+   - The Mapper processes the text line by line, converting it to lowercase, removing punctuation, and generating numeronyms for words longer than 2 characters.  
+   - The Reducer sums the occurrences of each numeronym and filters out results with a count below a specified threshold (`min.count`).  
+
+**Output File:**  
+- `NumeronymsCount.txt` – Contains the numeronyms along with their occurrence counts.
+
+
+
+Hadoop_Movie_Analytics
+
+This folder contains Hadoop MapReduce projects for analyzing movie datasets. 
+The main input is a CSV file named 'movies.csv'. 
+
+The folder includes three MapReduce projects, each producing its own output text file after processing:
+
+1. **DataCleaner.txt**  
+   - Cleans and formats the movie data from 'movies.csv'.  
+   - Output: `Data_format.txt` – contains cleaned and structured movie records.  
+
+2. **CountryMovieDuration.txt**  
+   - Computes the total movie duration per country.  
+   - Output: `Movies_duration_total_Per_Country.txt` – summarizes the total duration of all movies for each country.  
+
+3. **MoviesPerYearGenre.txt**  
+   - Counts the number of movies per year and genre with IMDb rating greater than 8.  
+   - Output: `MoviesPerYearGenre.txt` – shows movie counts by year and genre.  
+
+Each project demonstrates Hadoop MapReduce principles such as mapping, reducing, and handling large datasets efficiently.
+
+
+Hadoop_DNA_Analysis
+
+This folder contains a Hadoop MapReduce project for analyzing DNA sequences by counting k-mers.
+
+**Input File:**  
+- `ecoli.txt` – A text file containing DNA sequences from E. coli.
+
+**MapReduce Project:**  
+1. **EcoliDNA**  
+   - Counts all k-mers (substrings of length 2, 3, and 4) in DNA sequences.
+   - The Mapper generates all possible k-mers for each sequence line.
+   - The Reducer sums the occurrences of each k-mer across all sequences.
+
+**Output File:**  
+- `ecoli_results.txt` – Contains each k-mer and its total count in the dataset.
+
+
+Collins_AverageDegree
+
+Description:
+This project calculates node degrees in a weighted graph using two MapReduce jobs:
+
+collins – Reads the graph edges from the input file, filters connections based on a threshold, and computes the sum of weights (degree) per node.
+
+Input file: collins.txt (format: node1 node2 weight)
+
+Output file: collins_results.txt
+
+collins_2 – Reads the node degrees from the first job and filters nodes whose degrees are above the average.
+
+Input file: collins_results.txt
+
+Output file: collins_results_2.txt
+
+Notes:
+
+The first job (collins) requires a threshold parameter for filtering edges.
+
+The second job (collins_2) calculates the average degree internally and outputs only nodes above the average.
